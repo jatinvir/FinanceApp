@@ -1,9 +1,10 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useMemo, useState } from 'react'
+import { createTheme } from '@mui/material/styles'
+import { themeSettings } from './theme'
 import './App.css'
 
 function App() {
+  const theme = useMemo(() => createTheme(themeSettings), [])
 
   return (
     <div className = "app">
